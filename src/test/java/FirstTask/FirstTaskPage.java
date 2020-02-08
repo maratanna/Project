@@ -49,7 +49,7 @@ public class FirstTaskPage {
     @FindBy(xpath = "//article[@class-'address']")
     WebElement last;
 
-    @FindBy(xpath =".//a[@data-link-action='delete-address']")
+    @FindBy(xpath = "//*[@id='content']/descendant::h4[position()=2]/following::span[position()=2]")
     WebElement deleteButton;
 
     @FindBy(xpath = "/html/body/main/section/div/div/section/section/div[2]/article/div[1]/h4")
@@ -94,7 +94,8 @@ public class FirstTaskPage {
         phoneInput.sendKeys(phone);
     }
 
-    public void saveInformation() {
+    public void saveInformation() throws InterruptedException {
+        Thread.sleep(1000);
         saveButton.click();
     }
 

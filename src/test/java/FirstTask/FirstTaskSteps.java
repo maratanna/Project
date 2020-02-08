@@ -42,7 +42,7 @@ public class FirstTaskSteps {
     }
 
     @And("^User saves all information$")
-    public void userSavesAllInformation() {
+    public void userSavesAllInformation() throws InterruptedException {
         firstTaskPage.saveInformation();
     }
 
